@@ -4,6 +4,8 @@
 
 它保留原始口播和画面内已有字幕，把截图、证据特写、大字标题、信息卡、流程图和少量音效严格对齐到语义时间线。默认不加背景音乐，并且只完成 Studio 预览；最终渲染必须由用户明确批准。
 
+> 第一次使用 Codex 或 HyperFrames？先按 [新手环境配置](docs/setup.md) 完成安装和自检，再调用本 Skill。
+
 ## 这个 Skill 做什么
 
 - 将带字幕的中文口播包装成克制、清晰的科技教学视频。
@@ -15,16 +17,18 @@
 
 ## 前置条件
 
-本仓库提供的是 HyperFrames 工作流的偏好与决策层，不是独立的视频渲染器。使用前需要在 Codex 环境中安装并可调用以下基础 Skills：
+本仓库提供的是 HyperFrames 工作流的偏好与决策层，不是独立的视频渲染器。最小环境如下：
 
-- `hyperframes`
-- `talking-head-recut`
-- `hyperframes-core`
-- `hyperframes-keyframes`
-- `hyperframes-cli`
-- `media-use`
+| 项目 | 要求 |
+| --- | --- |
+| Codex | 使用支持 Skills、可访问本地文件和终端的 Codex 桌面端、CLI 或 IDE 扩展 |
+| Node.js | `22` 或更高版本，包含 `npm` 和 `npx` |
+| FFmpeg | `ffmpeg` 与 `ffprobe` 都能从终端调用 |
+| HyperFrames | 安装 `talking-head-recut` 工作流及核心 Skills |
+| 浏览器 | Chrome/Chromium；缺失时可由 HyperFrames 下载固定版本 |
+| 素材 | 自有或已获授权的视频、截图、录屏、字体和音效 |
 
-需要改动或重混源视频时，还会使用 `general-video`。
+GitHub 账号、GitHub token、OpenAI API Key、Docker、云渲染账号、NVIDIA GPU 和 CUDA 都不是本 Skill 本地使用的必需条件。完整安装、可选能力和排错方法见 [docs/setup.md](docs/setup.md)。
 
 ## 目录结构
 
@@ -41,19 +45,43 @@
 |               `-- timeline-playbook.md
 |-- examples/
 |   `-- prompts.md
+|-- docs/
+|   `-- setup.md
 |-- LICENSE
 `-- README.md
 ```
 
 ## 安装
 
-推荐在 Codex 中调用系统自带的 Skill Installer，并把仓库中的 skill 子目录作为安装源：
+### 1. 安装 HyperFrames 基础工作流
+
+在终端运行：
+
+```bash
+npx hyperframes skills update talking-head-recut
+npx hyperframes skills check
+npx hyperframes doctor
+```
+
+如果 `doctor` 报告缺少 Chrome，再运行：
+
+```bash
+npx hyperframes browser ensure
+```
+
+### 2. 安装本 Skill
+
+在 Codex 对话中粘贴：
 
 ```text
 $skill-installer 从 https://github.com/HaoAI-Explorer/hyperframes-tech-talking-head/tree/main/.agents/skills/hyperframes-tech-talking-head 安装这个 skill
 ```
 
-也可以克隆仓库后，将 `.agents/skills/hyperframes-tech-talking-head` 复制到 `$CODEX_HOME/skills/hyperframes-tech-talking-head`。安装完成后，在新的 Codex 对话中调用。
+公开仓库安装不需要 GitHub 登录或 token。手工安装时，可把 skill 目录放入项目的 `.agents/skills/hyperframes-tech-talking-head`，或把整个仓库克隆后从仓库目录启动 Codex。
+
+### 3. 开始新任务
+
+安装后新建一个 Codex 任务；如果 Skill 没有出现在选择器中，重启 Codex。然后使用下面的显式调用方式。
 
 ## 使用
 
@@ -85,4 +113,4 @@ $hyperframes-tech-talking-head 继续在现有 HyperFrames 工程上完成整条
 - `MINOR`：新增向后兼容的规则、版式或工作流能力。
 - `PATCH`：文字修订、兼容性修复或不改变调用方式的小改进。
 
-首个公开版本为 `v1.0.0`。GitHub Release 的标签与仓库中的可安装内容保持一致。
+首个公开版本为 `v1.0.0`；`v1.0.1` 增加面向 Codex 新用户的环境配置与排错文档。GitHub Release 的标签与仓库中的可安装内容保持一致。
