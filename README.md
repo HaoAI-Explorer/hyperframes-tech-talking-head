@@ -50,7 +50,7 @@
 推荐在 Codex 中调用系统自带的 Skill Installer，并把仓库中的 skill 子目录作为安装源：
 
 ```text
-$skill-installer 从 https://github.com/xfytxfy/hyperframes-tech-talking-head/tree/main/.agents/skills/hyperframes-tech-talking-head 安装这个 skill
+$skill-installer 从 https://github.com/HaoAI-Explorer/hyperframes-tech-talking-head/tree/main/.agents/skills/hyperframes-tech-talking-head 安装这个 skill
 ```
 
 也可以克隆仓库后，将 `.agents/skills/hyperframes-tech-talking-head` 复制到 `$CODEX_HOME/skills/hyperframes-tech-talking-head`。安装完成后，在新的 Codex 对话中调用。
