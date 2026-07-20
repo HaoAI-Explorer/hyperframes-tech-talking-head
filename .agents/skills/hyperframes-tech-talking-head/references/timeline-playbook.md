@@ -1,6 +1,6 @@
 # Timeline Playbook
 
-Use this reference to turn transcript beats into varied but coherent visual treatments. Select only patterns supported by the spoken content and available evidence.
+Use this reference only after the Requirements Receipt is confirmed. Turn transcript beats into varied but coherent treatments, adapting every timing suggestion to the confirmed aspect, style, intensity, and scope.
 
 ## Information Arc
 

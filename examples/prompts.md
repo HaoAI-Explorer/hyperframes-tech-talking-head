@@ -1,25 +1,37 @@
 # Prompt Examples
 
-## 前 20 秒
+## 从需求访谈开始
 
 ```text
-$hyperframes-tech-talking-head 把这条带字幕的口播视频做成 9:16 高级 AI 教学视频，先做前 20 秒。保留原字幕，不加背景音乐，只在明显的视觉落点使用少量音效。
+$hyperframes-tech-talking-head 我有一条口播视频，先问清楚需求再开始制作。
 ```
 
-## 完整口播包装
+## 竖屏科技教学
 
 ```text
-$hyperframes-tech-talking-head 继续在现有 HyperFrames 工程上做完整视频。截图必须跟口播语义对齐，桌面截图放大到手机能看清，允许短暂遮脸，但不要挡原字幕。
+$hyperframes-tech-talking-head 我要做抖音竖屏科技教学视频。先向我确认制作范围、字幕、截图、遮脸范围、BGM/SFX 和交付方式，再给出需求确认单；我确认前不要读取素材或开工。
 ```
 
-## 截图可读性修订
+## 横屏企业知识视频
 
 ```text
-$hyperframes-tech-talking-head 检查所有截图接管段落：先交代完整界面，再放大关键区域 2.5 到 3 倍，并补一条手机可读的中文说明。先更新 Studio 预览，不要渲染。
+$hyperframes-tech-talking-head 把现有口播包装成 YouTube 16:9 企业知识视频，风格克制、信息密度中等。请先补齐缺失需求并让我确认，不要套用深色科技风。
 ```
 
-## 音频约束
+## 非科技风格
 
 ```text
-$hyperframes-tech-talking-head 移除背景音乐，只保留与可见动作同步的稀疏科技 SFX。人声必须始终是主音频，检查通过后停在 Studio 等待确认。
+$hyperframes-tech-talking-head 这次想做杂志感口播，可能允许截图全屏接管。比例、配色、字体、动效强度和音频方案都先向我确认。
+```
+
+## 修改已有工程
+
+```text
+$hyperframes-tech-talking-head 继续修改这个 HyperFrames 口播工程。请先读取已确认的需求状态；如果本轮要改变画幅、BGM 或外部素材权限，先更新需求确认单并让我重新确认。
+```
+
+## 只做开头 V1
+
+```text
+$hyperframes-tech-talking-head 这次只做前 20 秒 V1，但不要替我假设平台、比例和风格。先完成需求访谈，Studio 预览确认后再决定是否继续全片。
 ```

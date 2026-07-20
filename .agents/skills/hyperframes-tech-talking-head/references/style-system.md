@@ -1,8 +1,8 @@
 # Style System
 
-Use this reference when selecting typography, colors, screenshot treatment, layout, motion intensity, and audio restraint.
+Use this reference only after the user confirms a technology/AI style or explicitly chooses the previous technology preset. Do not apply it to other confirmed styles.
 
-## Visual Identity
+## Technology Preset
 
 Use a restrained multi-accent palette:
 
@@ -20,8 +20,8 @@ Do not let one hue dominate the whole video. Avoid large blue gradients, neon-pu
 ## Typography
 
 - Use a bold Chinese sans-serif for claims and a mono face such as JetBrains Mono for technical metadata.
-- Main claim: normally `72-108px` on a `1080x1920` canvas.
-- Screenshot explanation: `44-58px`; do not rely on captured desktop UI text as the primary message.
+- Main claim: normally `72-108px` on a `1080px`-wide deliverable; adapt to the confirmed canvas and viewing distance.
+- Screenshot explanation: normally `44-58px` on a `1080px`-wide mobile deliverable; do not rely on captured desktop UI text as the primary message.
 - Compact metadata: `24-34px`, high contrast, short lines.
 - Keep letter spacing at `0`; never use viewport-scaled font sizing.
 - Keep titles to one or two short lines. Rewrite rather than shrinking below phone-readable size.
@@ -53,9 +53,9 @@ Use real screenshots, charts, screen recordings, icons, and diagrams as evidence
 - Make each transition explain a relationship: source to result, tool to tool, parameter to value, prompt to preview, problem to revision.
 - Limit transition families to hard cut, short masked wipe, position/scale handoff, and a restrained fade where needed.
 
-## Audio
+## Audio Recommendation
 
-- Default BGM: none.
+- Ask whether BGM is wanted during intake. For this technology preset, recommend no BGM when speech clarity is the priority, but do not assume the answer.
 - Preserve source speech at full level.
 - Use sparse SFX only on visible landings such as title lock, data scan, approval, export, or final thesis.
 - Reuse a small sound vocabulary. For a two-minute tutorial, `6-14` cues are normally enough.

@@ -1,4 +1,4 @@
 interface:
-  display_name: "科技口播视频包装"
-  short_description: "将口播素材包装为高级、清晰、强节奏的科技教学短视频"
-  default_prompt: "使用 $hyperframes-tech-talking-head 把这条带字幕的口播视频包装成 9:16 高级科技教学视频。"
+  display_name: "口播视频定制包装"
+  short_description: "先确认比例、风格、素材与交付需求，再定制口播视频"
+  default_prompt: "使用 $hyperframes-tech-talking-head，先向我询问并确认本次视频的范围、比例、风格、素材、字幕和音频需求，再开始制作。"
